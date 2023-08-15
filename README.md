@@ -1,1 +1,1 @@
-<h1 style="text-align:center">Hello, I'm glaqss.</h1>
+<h1 align="center">Hello, I'm glaqss.</h1>
