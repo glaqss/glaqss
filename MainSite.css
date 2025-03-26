@@ -1,0 +1,70 @@
+/*
+
+	Global Rules
+
+*/
+html {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	align-content: center;
+}
+
+body {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #333;
+	color: #ddd;
+	font-family: "Roboto";
+	margin: 0;
+}
+
+button {
+	border: 0;
+}
+
+/*
+
+	Header
+
+*/
+#Header {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0 1em;
+}
+
+/*Startpage color override*/
+.Startpage #Header {
+	background: linear-gradient(90deg, #300 0%, #030 50%, #003 100%);
+}
+
+#Header button {
+	font-family: "Roboto";
+}
+
+
+/*
+
+	Media Queries
+
+*/
+@media only screen and (max-width: 2000px) {
+	body {
+		align-self: center;
+		max-width: 1200px;
+	}
+}
+
+
+@media only screen and (max-width: 1200px) {
+	body {
+		max-width: none;
+	}
+}
+
