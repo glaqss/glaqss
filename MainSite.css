@@ -3,10 +3,15 @@
 	Global Rules
 
 */
+:root {
+	--rainbow-color: linear-gradient(90deg, #f00, #f80, #ff0, #0c0, #0cc, #00f, #40f);
+	--menu-active: 0;
+}
 html {
 	display: flex;
 	flex-direction: column;
 	width: 100vw;
+	height: 100vh;
 	align-content: center;
 }
 
@@ -14,16 +19,18 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-evenly;
 	background-color: #333;
 	color: #ddd;
 	font-family: "Roboto";
 	margin: 0;
+	width: 100%;
 }
 
 button {
 	border: 0;
 }
+
 
 /*
 
@@ -38,14 +45,64 @@ button {
 	width: 100%;
 	padding: 0 1em;
 }
+#HeaderButtons {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+#HeaderButtons button,
+#MobileMenuActivator {
+	display: flex;
+	font-weight: 300;
+	font-size: 2em;
+	font-family: "Roboto Flex";
+	height:fit-content;
+	padding: 1px 2px;
+	margin: 0 0.2em;
+	border: 0px;
+}
+#HeaderButtons > button:first-of-type() {
+	margin: 0 0 0.2em;
+}
+#HeaderButtons > button:last-of-type(),
+#MobileMenuActivator {
+	margin: 0.2em 0 0;
+}
+#HeaderText {
+	font-weight: 300;
+}
+
+
+/*
+	Hamburger menu
+*/
+#MobileMenuActivator {
+	display: none;
+}
 
 /*Startpage color override*/
 .Startpage #Header {
-	background: linear-gradient(90deg, #300 0%, #030 50%, #003 100%);
+	background: var(--rainbow-color);
 }
 
-#Header button {
-	font-family: "Roboto";
+/*
+
+	Footer
+
+*/
+footer {
+	display: flex;
+	flex-wrap: wrap;
+	align-self: flex-end;
+	background: var(--rainbow-color);
+	width: 100%;
+	margin: 0;
+}
+
+footer > div {
+	flex-basis: 25%;
 }
 
 
@@ -59,12 +116,39 @@ button {
 		align-self: center;
 		max-width: 1200px;
 	}
+
+	footer {
+		flex-direction: row;
+	}
+
+	#MobileMenuActivator {
+		display: none;
+	}
+	#HeaderButtons {
+		display: flex;
+	}
 }
 
 
 @media only screen and (max-width: 1200px) {
-	body {
-		max-width: none;
+	footer {
+		display: flex;
+		flex-direction: column;
+		flex-basis: 50%;
+	}
+
+	#MobileMenuActivator {
+		display: flex;
+	}
+	#HeaderButtons {
+		display: none;
 	}
 }
 
+@media only screen and (max-width: 800px) {
+	footer {
+		display: flex;
+		flex-direction: column;
+		flex-basis: 100%;
+	}
+}
