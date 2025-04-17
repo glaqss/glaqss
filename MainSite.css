@@ -63,10 +63,10 @@ button {
 	margin: 0 0.2em;
 	border: 0px;
 }
-#HeaderButtons > button:first-of-type() {
+#HeaderButtons > button:first-of-type {
 	margin: 0 0 0.2em;
 }
-#HeaderButtons > button:last-of-type(),
+#HeaderButtons > button:last-of-type,
 #MobileMenuActivator {
 	margin: 0.2em 0 0;
 }
@@ -92,16 +92,18 @@ button {
 	Footer
 
 */
-footer {
+#Footer {
 	display: flex;
 	flex-wrap: wrap;
 	align-self: flex-end;
+	flex-direction: row;
 	background: var(--rainbow-color);
 	width: 100%;
 	margin: 0;
 }
 
-footer > div {
+#Footer > div {
+	display: flex;
 	flex-basis: 25%;
 }
 
@@ -117,7 +119,7 @@ footer > div {
 		max-width: 1200px;
 	}
 
-	footer {
+	#footer {
 		flex-direction: row;
 	}
 
@@ -131,7 +133,7 @@ footer > div {
 
 
 @media only screen and (max-width: 1200px) {
-	footer {
+	#Footer {
 		display: flex;
 		flex-direction: column;
 		flex-basis: 50%;
@@ -146,7 +148,7 @@ footer > div {
 }
 
 @media only screen and (max-width: 800px) {
-	footer {
+	#Footer {
 		display: flex;
 		flex-direction: column;
 		flex-basis: 100%;
