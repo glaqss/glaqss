@@ -7,5 +7,3 @@
   <img src="https://img.shields.io/badge/Roblox_Studio-%2300A2FF?style=for-the-badge&logo=robloxstudio&logoColor=%23ffffff" style="max-width:100%;" />
  <img src="https://img.shields.io/badge/Visual_Studio_2022-%235C2D91?style=for-the-badge&logo=visualstudio&logoColor=%23ffffff" style="max-width:100%;" />
 </p>
-
-## Readme, end.
